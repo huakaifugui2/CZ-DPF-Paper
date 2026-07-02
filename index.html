@@ -202,13 +202,12 @@
     <header>
       <h1><span class="title-nowrap">DPF: Differentiable Polyphase Filtering for<br>Large-Kernel Approximation</span></h1>
       <p class="authors">Zhe Cao<sup>*</sup>, Zhizhen Wu<sup>*</sup>, Zhonggui Chen, Rui Wang, Yuchi Huo<sup>&dagger;</sup></p>
-      <p class="affiliation">State Key Lab of CAD&amp;CG, Zhejiang University; School of Informatics, Xiamen University</p>
+      <p class="affiliation">State Key Lab of CAD&amp;CG, Zhejiang University; Xiamen University</p>
       <p class="venue">SIGGRAPH 2026</p>
       <p class="contribution-note"><sup>*</sup> Equal contribution. <sup>&dagger;</sup> Corresponding author.</p>
       <div class="links">
         <a class="button" href="https://huakaifugui2.github.io/CZ-DPF-Paper/static/pdfs/dpf-paper.pdf" target="_blank" rel="noopener">Paper</a>
         <a class="button" href="https://doi.org/10.1145/3799902.3811160" target="_blank" rel="noopener">DOI</a>
-        <a class="button" href="#bibtex">BibTeX</a>
       </div>
     </header>
 
@@ -217,18 +216,6 @@
       <p class="abstract">Large-kernel filtering is a fundamental operation in image post-processing and video effects. While decomposing large kernels into multiple sparse ones is a proven strategy for acceleration on parallel architectures, existing optimization-based approximation methods are constrained to fixed-resolution processing. In this paper, we propose a novel framework based on Polyphase Filtering, which enables the differentiable optimization of sparse kernels across varying resolutions. This approach achieves the fastest approximation to date for large kernels and remains highly effective even for spatially-variant dense kernels. To further enhance efficiency, we introduce Spatial-to-Depth Transformation and Asymmetric Intensity-Decoupled Transformation. Furthermore, to address scenarios with spatially varying kernel sizes, we employ a Layer-Adaptive Filtering strategy that integrates kernels from multiple levels for rapid filtering. Extensive experiments demonstrate that our method significantly outperforms existing state-of-the-art techniques in both computational performance and visual quality.</p>
     </section>
 
-    <section id="bibtex">
-      <h2>BibTeX</h2>
-      <pre><code>@inproceedings{cao2026dpf,
-  title={DPF: Differentiable Polyphase Filtering for Large-Kernel Approximation},
-  author={Cao, Zhe and Wu, Zhizhen and Chen, Zhonggui and Wang, Rui and Huo, Yuchi},
-  booktitle={SIGGRAPH Conference Papers '26},
-  year={2026},
-  publisher={Association for Computing Machinery},
-  doi={10.1145/3799902.3811160},
-  url={https://doi.org/10.1145/3799902.3811160}
-}</code></pre>
-    </section>
 
     <footer>
       <p>Project page for DPF.</p>
