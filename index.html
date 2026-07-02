@@ -13,7 +13,8 @@
   <meta name="citation_author" content="Huo, Yuchi">
   <meta name="citation_publication_date" content="2026/07/19">
   <meta name="citation_conference_title" content="SIGGRAPH Conference Papers '26">
-  <meta name="citation_pdf_url" content="https://github.com/huakaifugui2/CZ-DPF-Paper/releases/download/paper-v1/DPF.Differentiable.Polyphase.Filtering.for.Large-Kernel.Approximation.pdf">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <meta name="citation_pdf_url" content="https://huakaifugui2.github.io/CZ-DPF-Paper/static/pdfs/dpf-paper.pdf">
   <style>
     :root {
       color-scheme: light;
@@ -122,6 +123,13 @@
       text-decoration: none;
     }
 
+    .button .icon {
+      display: inline-flex;
+      align-items: center;
+      margin-right: 7px;
+      font-size: 0.95em;
+    }
+
     .button:hover {
       background: #1f1f1f;
       color: #fff;
@@ -184,6 +192,7 @@
     .video-section {
       width: 100%;
       max-width: 1280px;
+      scroll-margin-top: 24px;
     }
 
     .figure-block {
@@ -296,9 +305,9 @@
       <p class="venue">SIGGRAPH 2026</p>
       <p class="contribution-note"><sup>*</sup> Equal contribution. <sup>&dagger;</sup> Corresponding author.</p>
       <div class="links">
-        <a class="button" href="https://github.com/huakaifugui2/CZ-DPF-Paper/releases/download/paper-v1/DPF.Differentiable.Polyphase.Filtering.for.Large-Kernel.Approximation.pdf" target="_blank" rel="noopener">Paper</a>
-        <a class="button" href="https://github.com/huakaifugui2/CZ-DPF-Paper/releases/download/paper-v1/supplemental_material.pdf" target="_blank" rel="noopener">Supp</a>
-        <a class="button" href="https://github.com/huakaifugui2/CZ-DPF-Paper/releases/download/paper-v1/video.mp4" target="_blank" rel="noopener">Video</a>
+        <a class="button" href="https://huakaifugui2.github.io/CZ-DPF-Paper/static/pdfs/dpf-paper.pdf" target="_blank" rel="noopener"><span class="icon"><i class="fas fa-file-pdf"></i></span>Paper</a>
+        <a class="button" href="https://github.com/huakaifugui2/CZ-DPF-Paper/releases/download/paper-v1/supplemental_material.pdf" target="_blank" rel="noopener"><span class="icon"><i class="fas fa-file-alt"></i></span>Supp</a>
+        <a class="button" href="#video"><span class="icon"><i class="fas fa-play"></i></span>Video</a>
       </div>
     </header>
 
@@ -356,7 +365,7 @@
       </figure>
     </section>
 
-    <section class="video-section">
+    <section id="video" class="video-section">
       <h2>Video</h2>
       <video class="paper-video" controls preload="metadata" playsinline>
         <source src="https://github.com/huakaifugui2/CZ-DPF-Paper/releases/download/paper-v1/video.mp4" type="video/mp4">
