@@ -6,4 +6,4 @@ https://huakaifugui2.github.io/CZ-DPF-Paper/
 
 ## Paper
 
-https://huakaifugui2.github.io/CZ-DPF-Paper/static/pdfs/dpf-paper.pdf
+https://github.com/huakaifugui2/CZ-DPF-Paper/releases/download/paper-v1/DPF.Differentiable.Polyphase.Filtering.for.Large-Kernel.Approximation.pdf
