@@ -1,80 +1,79 @@
-# Academic Project Page Template
+# CZ-DPF-Paper
 
-> **Update (September 2025)**: This template has been modernized with better design, SEO, and mobile support. For the original version, see the [original-version branch](https://github.com/eliahuhorwitz/Academic-project-page-template/tree/original-version).
+Minimal project page for:
 
-A clean, responsive template for academic project pages.
+**DPF: Differentiable Polyphase Filtering for Large-Kernel Approximation**
 
+## Website
 
-Example project pages built using this template are:
-- https://horwitz.ai/probex
-- https://vision.huji.ac.il/probegen
-- https://horwitz.ai/mother
-- https://horwitz.ai/spectral_detuning
-- https://vision.huji.ac.il/ladeda
-- https://vision.huji.ac.il/dsire
-- https://horwitz.ai/podd
-- https://dreamix-video-editing.github.io
-- https://horwitz.ai/conffusion
-- https://horwitz.ai/3d_ads/
-- https://vision.huji.ac.il/ssrl_ad
-- https://vision.huji.ac.il/deepsim
+The public project page is:
 
+https://huakaifugui2.github.io/CZ-DPF-Paper/
 
+The page is served by GitHub Pages from this repository.
 
-## Start using the template
-To start using the template click on `Use this Template`.
+## Paper PDF
 
-The template uses html for controlling the content and css for controlling the style. 
-To edit the websites contents edit the `index.html` file. It contains different HTML "building blocks", use whichever ones you need and comment out the rest.  
+The full paper PDF is stored in this repository at:
 
-**IMPORTANT!** Make sure to replace the `favicon.ico` under `static/images/` with one of your own, otherwise your favicon is going to be a dreambooth image of me.
+```text
+static/pdfs/dpf-paper.pdf
+```
 
-## What's New
+The public PDF URL is:
 
-- Modern, clean design with better mobile support
-- Improved SEO with proper meta tags and structured data
-- Performance improvements (lazy loading, optimized assets)
-- More Works dropdown
-- Copy button for BibTeX citations
-- Better accessibility
+https://huakaifugui2.github.io/CZ-DPF-Paper/static/pdfs/dpf-paper.pdf
 
-## Components
+The `Paper` button in `index.html` points to that full PDF.
 
-- Teaser video
-- Image carousel
-- YouTube video embedding
-- Video carousel
-- PDF poster viewer
-- BibTeX citation
+## Local Files
 
-## Customization
+Local repository path:
 
-The HTML file has TODO comments showing what to replace:
+```text
+E:\Paper_Web\CZ-DPF-Paper
+```
 
-- Paper title, authors, institution, conference
-- Links (arXiv, GitHub, etc.)
-- Abstract and descriptions  
-- Videos, images, and PDFs
-- Related works in the dropdown
-- Meta tags for SEO and social sharing
+Main files:
 
-### Meta Tags
-The template includes meta tags for better search engine visibility and social media sharing. These appear in the `<head>` section and help with:
-- Google Scholar indexing
-- Social media previews (Twitter, Facebook, LinkedIn)
-- Search engine optimization
+```text
+index.html                  # project page
+static/pdfs/dpf-paper.pdf   # full paper PDF
+```
 
-Create a 1200x630px social preview image at `static/images/social_preview.png`.
+## Update And Publish
 
-## Tips
+After editing `index.html` or replacing the PDF, publish changes with:
 
-- Compress images with [TinyPNG](https://tinypng.com)
-- Use YouTube for large videos (>10MB)  
-- Replace the favicon in `static/images/`
-- Works with GitHub Pages
+```powershell
+cd E:\Paper_Web\CZ-DPF-Paper
+git status
+git add index.html static/pdfs/dpf-paper.pdf
+git commit -m "Update project page"
+git push
+```
 
-## Acknowledgments
-Parts of this project page were adopted from the [Nerfies](https://nerfies.github.io/) page.
+GitHub Pages can take a few minutes to refresh after pushing.
 
-## Website License
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+## GitHub Pages Settings
+
+In the GitHub repository, use:
+
+```text
+Settings -> Pages
+Source: Deploy from a branch
+Branch: main
+Folder: /root
+```
+
+## Notes
+
+- Keep this repository public if the website and PDF should be publicly accessible.
+- The current PDF is about 45 MB, so loading speed depends on GitHub Pages/CDN and the visitor's network.
+- For faster full-paper downloads, host the PDF on a stronger file server such as arXiv, ACM DL, a university server, or another CDN-backed storage service, then update the `Paper` link in `index.html`.
+
+## Template Credit
+
+This page was originally based on the Academic Project Page Template:
+
+https://github.com/eliahuhorwitz/Academic-project-page-template
