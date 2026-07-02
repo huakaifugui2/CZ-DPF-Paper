@@ -149,6 +149,47 @@
       text-align: justify;
     }
 
+
+    .figure-section,
+    .highlight-section {
+      max-width: 1040px;
+    }
+
+    .figure-block {
+      margin: 0 auto;
+    }
+
+    .figure-block + .figure-block {
+      margin-top: 40px;
+    }
+
+    .paper-figure {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      background: #fff;
+    }
+
+    .figure-caption {
+      max-width: 960px;
+      margin: 10px auto 0;
+      color: var(--muted);
+      font-size: 0.96rem;
+      line-height: 1.48;
+      text-align: left;
+    }
+
+    .figure-caption strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .highlight-section h2 {
+      margin-bottom: 24px;
+    }
+
     pre {
       margin: 0;
       overflow-x: auto;
@@ -193,6 +234,11 @@
       h2 {
         font-size: 1.65rem;
       }
+
+
+      .figure-caption {
+        font-size: 0.92rem;
+      }
     }
   </style>
 </head>
@@ -209,11 +255,55 @@
       </div>
     </header>
 
+    <section class="figure-section">
+      <figure class="figure-block">
+        <img class="paper-figure" src="static/images/figures/fig1-teaser.png" alt="Teaser visual comparison for Differentiable Polyphase Filtering." width="2091" height="595" decoding="async" fetchpriority="high">
+        <figcaption class="figure-caption"><strong>Fig. 1. Teaser.</strong> We propose an approach for rapid large-kernel spatially varying filtering via our Differentiable Polyphase Filtering pipeline. We compare our method with optimization-based sparse baselines (PST, DSKC). For anisotropic rotational motion blur and spatially varying ring-shaped bokeh filters, our approach achieves approximately 3000x and 600x speedups over dense kernel convolution, respectively, and is about 2x faster than the state of the art.</figcaption>
+      </figure>
+    </section>
+
     <section>
       <h2>Abstract</h2>
       <p class="abstract">Large-kernel filtering is a fundamental operation in image post-processing and video effects. While decomposing large kernels into multiple sparse ones is a proven strategy for acceleration on parallel architectures, existing optimization-based approximation methods are constrained to fixed-resolution processing. In this paper, we propose a novel framework based on Polyphase Filtering, which enables the differentiable optimization of sparse kernels across varying resolutions. This approach achieves the fastest approximation to date for large kernels and remains highly effective even for spatially-variant dense kernels. To further enhance efficiency, we introduce Spatial-to-Depth Transformation and Asymmetric Intensity-Decoupled Transformation. Furthermore, to address scenarios with spatially varying kernel sizes, we employ a Layer-Adaptive Filtering strategy that integrates kernels from multiple levels for rapid filtering. Extensive experiments demonstrate that our method significantly outperforms existing state-of-the-art techniques in both computational performance and visual quality.</p>
     </section>
 
+    <section class="highlight-section">
+      <h2>Highlights</h2>
+      <figure class="figure-block">
+        <img class="paper-figure" src="static/images/figures/fig2-pipeline.png" alt="Overview of the Differentiable Polyphase Filtering pipeline." width="2313" height="802" loading="lazy" decoding="async">
+        <figcaption class="figure-caption"><strong>Fig. 2. Differentiable Polyphase Filtering pipeline.</strong> An illustration of our Differentiable Polyphase Filtering pipeline. In the Polyphase Filter Optimization, we optimize the parameters of the Polyphase Filter with poly impulses and target kernel shifts to ensure pixel results in polyphase. Downsampler and Upsampler consist of Spatial-to-Depth Transformation and Asymmetric Intensity-Decoupled Sampler compact pixels into Polyphase Filtering. Polyphase Filtering uses the optimized parameters of sparse kernels at multiple resolutions. Layer-Adaptive Filtering Layer in Polyphase Filtering selects layers to preserve details for small kernels.</figcaption>
+      </figure>
+
+      <figure class="figure-block">
+        <img class="paper-figure" src="static/images/figures/fig7-bloom.png" alt="Visual comparison of bloom rendering." width="2091" height="686" loading="lazy" decoding="async">
+        <figcaption class="figure-caption"><strong>Fig. 7. Bloom rendering.</strong> Visual comparison of bloom rendering. We compare our method against traditional Gaussian approximations (Multi-Box, Kawase, Dual Filtering) and optimization-based sparse baselines (PST, DSKC). The rows display, from top to bottom: final composited bloom results; filtered highlights annotated with runtime latency in ms; error maps relative to the ground truth, where deeper blue indicates larger error; and kernel approximation visualizations with iso-contours, labeled with the Covariance Frobenius Norm to quantify the kernel diffusion distribution.</figcaption>
+      </figure>
+
+      <figure class="figure-block">
+        <img class="paper-figure" src="static/images/figures/fig8-bokeh.png" alt="Visual comparison of bokeh rendering." width="1503" height="574" loading="lazy" decoding="async">
+        <figcaption class="figure-caption"><strong>Fig. 8. Bokeh rendering.</strong> Visual comparison of bokeh rendering. We compare our method against optimization-based sparse baselines (PST, DSKC). The rows display, from top to bottom: final composited bokeh results; filtered highlights annotated with runtime latency in ms; and kernel approximation visualizations, labeled with PSNR to measure kernel structure and details.</figcaption>
+      </figure>
+
+      <figure class="figure-block">
+        <img class="paper-figure" src="static/images/figures/fig10-sv-bokeh.png" alt="Visual comparison of spatially varying bokeh rendering." width="2091" height="835" loading="lazy" decoding="async">
+        <figcaption class="figure-caption"><strong>Fig. 10. Spatially varying bokeh.</strong> Visual comparison of spatially varying bokeh rendering. We compare our method against optimization-based sparse baselines (PST, DSKC). Each result is labeled with its corresponding PSNR and runtime latency in ms.</figcaption>
+      </figure>
+
+      <figure class="figure-block">
+        <img class="paper-figure" src="static/images/figures/fig11-rotational-blur.png" alt="Visual comparison of rotational blur." width="2091" height="329" loading="lazy" decoding="async">
+        <figcaption class="figure-caption"><strong>Fig. 11. Rotational blur.</strong> Visual comparison of rotational blur. We compare our method against optimization-based sparse baselines (PST, DSKC).</figcaption>
+      </figure>
+
+      <figure class="figure-block">
+        <img class="paper-figure" src="static/images/figures/fig12-radial-blur.png" alt="Visual comparison of radial blur." width="2091" height="329" loading="lazy" decoding="async">
+        <figcaption class="figure-caption"><strong>Fig. 12. Radial blur.</strong> Visual comparison of radial blur. We compare our method against optimization-based sparse baselines (PST, DSKC).</figcaption>
+      </figure>
+
+      <figure class="figure-block">
+        <img class="paper-figure" src="static/images/figures/fig13-sv-gaussian.png" alt="Visual comparison of spatially varying Gaussian blur." width="2091" height="432" loading="lazy" decoding="async">
+        <figcaption class="figure-caption"><strong>Fig. 13. Spatially varying Gaussian blur.</strong> Visual comparison of spatially varying Gaussian blur. We compare our method against optimization-based sparse baselines (PST, DSKC).</figcaption>
+      </figure>
+    </section>
 
     <footer>
       <p>Project page for DPF.</p>
