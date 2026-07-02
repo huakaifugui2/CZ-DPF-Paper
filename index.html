@@ -13,7 +13,6 @@
   <meta name="citation_author" content="Huo, Yuchi">
   <meta name="citation_publication_date" content="2026/07/19">
   <meta name="citation_conference_title" content="SIGGRAPH Conference Papers '26">
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
   <meta name="citation_pdf_url" content="https://huakaifugui2.github.io/CZ-DPF-Paper/static/pdfs/dpf-paper.pdf">
   <style>
     :root {
@@ -123,11 +122,22 @@
       text-decoration: none;
     }
 
-    .button .icon {
+    .button-icon {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       margin-right: 7px;
-      font-size: 0.95em;
+      line-height: 0;
+    }
+
+    .button-icon svg {
+      width: 1em;
+      height: 1em;
+      fill: none;
+      stroke: currentColor;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 2;
     }
 
     .button:hover {
@@ -305,9 +315,9 @@
       <p class="venue">SIGGRAPH 2026</p>
       <p class="contribution-note"><sup>*</sup> Equal contribution. <sup>&dagger;</sup> Corresponding author.</p>
       <div class="links">
-        <a class="button" href="https://huakaifugui2.github.io/CZ-DPF-Paper/static/pdfs/dpf-paper.pdf" target="_blank" rel="noopener"><span class="icon"><i class="fas fa-file-pdf"></i></span>Paper</a>
-        <a class="button" href="https://github.com/huakaifugui2/CZ-DPF-Paper/releases/download/paper-v1/supplemental_material.pdf" target="_blank" rel="noopener"><span class="icon"><i class="fas fa-file-alt"></i></span>Supp</a>
-        <a class="button" href="#video"><span class="icon"><i class="fas fa-play"></i></span>Video</a>
+        <a class="button" href="https://huakaifugui2.github.io/CZ-DPF-Paper/static/pdfs/dpf-paper.pdf" target="_blank" rel="noopener"><span class="button-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path><path d="M8 13h2a2 2 0 0 1 0 4H8z"></path><path d="M14 13v4"></path><path d="M14 13h2"></path><path d="M14 15h1.5"></path></svg></span>Paper</a>
+        <a class="button" href="https://huakaifugui2.github.io/CZ-DPF-Paper/static/pdfs/supplemental_material.pdf" target="_blank" rel="noopener"><span class="button-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path><path d="M8 13h8"></path><path d="M8 17h8"></path><path d="M8 9h2"></path></svg></span>Supp</a>
+        <a class="button" href="#video"><span class="button-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M10 8l6 4-6 4z"></path></svg></span>Video</a>
       </div>
     </header>
 
