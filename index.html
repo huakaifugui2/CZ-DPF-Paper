@@ -16,33 +16,189 @@
   <meta name="citation_doi" content="10.1145/3799902.3811160">
   <meta name="citation_pdf_url" content="https://huakaifugui2.github.io/CZ-DPF-Paper/static/pdfs/dpf-paper.pdf">
   <style>
-    :root { color-scheme: light; --text: #151515; --muted: #626262; --line: #dedede; --bg: #fff; }
+    :root {
+      color-scheme: light;
+      --text: #222;
+      --muted: #555;
+      --link: #3273dc;
+      --line: #e7e7e7;
+      --panel: #f5f5f5;
+      --bg: #fff;
+    }
+
     * { box-sizing: border-box; }
-    body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: var(--text); background: var(--bg); line-height: 1.62; }
-    main { max-width: 880px; margin: 0 auto; padding: 72px 24px 56px; }
-    header { text-align: center; margin-bottom: 48px; }
-    h1 { margin: 0 0 18px; font-size: clamp(2rem, 5vw, 3.35rem); line-height: 1.1; font-weight: 700; letter-spacing: 0; }
-    .authors { color: var(--text); font-size: 1.08rem; margin: 8px 0 4px; }
-    .venue, .note { color: var(--muted); font-size: 1rem; margin: 4px 0; }
-    .links { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 28px; }
-    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 42px; padding: 9px 18px; border: 1px solid var(--text); border-radius: 4px; color: var(--text); text-decoration: none; font-weight: 600; }
-    .button.primary { background: var(--text); color: #fff; }
-    section { border-top: 1px solid var(--line); padding-top: 30px; margin-top: 34px; }
-    h2 { margin: 0 0 14px; font-size: 1.35rem; }
-    p { margin: 0 0 14px; }
-    pre { overflow-x: auto; background: #f7f7f7; border: 1px solid var(--line); border-radius: 4px; padding: 16px; font-size: 0.92rem; line-height: 1.45; }
-    footer { margin-top: 42px; color: var(--muted); font-size: 0.9rem; text-align: center; }
+
+    body {
+      margin: 0;
+      font-family: "Noto Sans", Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      font-size: 16px;
+      line-height: 1.55;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 52px 20px 36px;
+    }
+
+    header {
+      text-align: center;
+      margin: 0 auto 34px;
+    }
+
+    h1 {
+      margin: 0 0 18px;
+      font-size: 2.8rem;
+      line-height: 1.14;
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+
+    .title-nowrap {
+      white-space: nowrap;
+    }
+
+    .authors {
+      margin: 0 0 8px;
+      font-size: 1.25rem;
+      color: var(--text);
+    }
+
+    .authors a,
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    .authors a:hover,
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .affiliation {
+      margin: 0 0 6px;
+      font-size: 1.08rem;
+      color: var(--text);
+    }
+
+    .venue {
+      margin: 0;
+      font-size: 1rem;
+      color: var(--text);
+    }
+
+    .contribution-note {
+      margin: 10px 0 0;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 38px;
+      padding: 7px 17px;
+      border-radius: 999px;
+      background: #363636;
+      color: #fff;
+      font-size: 0.98rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .button:hover {
+      background: #1f1f1f;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    section {
+      max-width: 820px;
+      margin: 36px auto 0;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      text-align: center;
+      font-size: 2rem;
+      line-height: 1.2;
+      font-weight: 400;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    .abstract {
+      text-align: justify;
+    }
+
+    pre {
+      margin: 0;
+      overflow-x: auto;
+      white-space: pre;
+      background: var(--panel);
+      border-radius: 4px;
+      padding: 18px 20px;
+      font-family: Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 0.95rem;
+      line-height: 1.45;
+    }
+
+    footer {
+      max-width: 820px;
+      margin: 38px auto 0;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    @media (max-width: 760px) {
+      main {
+        padding-top: 34px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .title-nowrap {
+        white-space: normal;
+      }
+
+      .authors {
+        font-size: 1.08rem;
+      }
+
+      h2 {
+        font-size: 1.65rem;
+      }
+    }
   </style>
 </head>
 <body>
   <main>
     <header>
-      <h1>DPF: Differentiable Polyphase Filtering for Large-Kernel Approximation</h1>
-      <p class="authors">Zhe Cao*, Zhizhen Wu*, Zhonggui Chen, Rui Wang, Yuchi Huo</p>
-      <p class="venue">SIGGRAPH Conference Papers '26, July 19-23, 2026, Los Angeles, CA, USA</p>
-      <p class="note">* Equal contribution. Yuchi Huo is the corresponding author.</p>
+      <h1><span class="title-nowrap">DPF: Differentiable Polyphase Filtering for<br>Large-Kernel Approximation</span></h1>
+      <p class="authors">Zhe Cao*, Zhizhen Wu*, Zhonggui Chen, Rui Wang, Yuchi Huo&dagger;</p>
+      <p class="affiliation">State Key Lab of CAD&amp;CG, Zhejiang University; School of Informatics, Xiamen University</p>
+      <p class="venue">SIGGRAPH 2026</p>
+      <p class="contribution-note">* Equal contribution. &dagger; Corresponding author.</p>
       <div class="links">
-        <a class="button primary" href="static/pdfs/dpf-paper.pdf" target="_blank" rel="noopener">Paper PDF</a>
+        <a class="button" href="static/pdfs/dpf-paper.pdf" target="_blank" rel="noopener">Paper</a>
         <a class="button" href="https://doi.org/10.1145/3799902.3811160" target="_blank" rel="noopener">DOI</a>
         <a class="button" href="#bibtex">BibTeX</a>
       </div>
@@ -50,7 +206,7 @@
 
     <section>
       <h2>Abstract</h2>
-      <p>Large-kernel filtering is a fundamental operation in image post-processing and video effects. While decomposing large kernels into multiple sparse ones is a proven strategy for acceleration on parallel architectures, existing optimization-based approximation methods are constrained to fixed-resolution processing. In this paper, we propose a novel framework based on Polyphase Filtering, which enables the differentiable optimization of sparse kernels across varying resolutions. This approach achieves the fastest approximation to date for large kernels and remains highly effective even for spatially-variant dense kernels. To further enhance efficiency, we introduce Spatial-to-Depth Transformation and Asymmetric Intensity-Decoupled Transformation. Furthermore, to address scenarios with spatially varying kernel sizes, we employ a Layer-Adaptive Filtering strategy that integrates kernels from multiple levels for rapid filtering. Extensive experiments demonstrate that our method significantly outperforms existing state-of-the-art techniques in both computational performance and visual quality.</p>
+      <p class="abstract">Large-kernel filtering is a fundamental operation in image post-processing and video effects. While decomposing large kernels into multiple sparse ones is a proven strategy for acceleration on parallel architectures, existing optimization-based approximation methods are constrained to fixed-resolution processing. In this paper, we propose a novel framework based on Polyphase Filtering, which enables the differentiable optimization of sparse kernels across varying resolutions. This approach achieves the fastest approximation to date for large kernels and remains highly effective even for spatially-variant dense kernels. To further enhance efficiency, we introduce Spatial-to-Depth Transformation and Asymmetric Intensity-Decoupled Transformation. Furthermore, to address scenarios with spatially varying kernel sizes, we employ a Layer-Adaptive Filtering strategy that integrates kernels from multiple levels for rapid filtering. Extensive experiments demonstrate that our method significantly outperforms existing state-of-the-art techniques in both computational performance and visual quality.</p>
     </section>
 
     <section id="bibtex">
