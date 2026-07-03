@@ -1,4 +1,4 @@
-# DPF: Differentiable Polyphase Filtering for Large-Kernel Approximation
+# DPF: Differentiable Polyphase Filtering for Large-Kernel Approximation - SIGGRAPH 2026
 
 ## Project Page
 
